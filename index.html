@@ -2,605 +2,435 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keizer Rugrats Playschool | Private Early Learning Environment | Keizer, Oregon</title>
 
-  <title>Keizer Preschool & Daycare | Keizer Rugrats Playschool | Childcare in Keizer, Oregon</title>
-
-  <meta name="description" content="Keizer Rugrats Playschool is a nurturing, safe preschool and daycare in Keizer, Oregon for ages 2–5. Small-group, play-based learning in a dedicated home setting with a structured daily rhythm and strong kindergarten-readiness foundations." />
-  <meta name="keywords" content="Keizer preschool, Keizer daycare, Keizer childcare, preschool in Keizer Oregon, daycare in Keizer Oregon, play-based preschool Keizer, childcare near me Keizer" />
-  <meta name="author" content="Keizer Rugrats Playschool" />
-  <meta name="robots" content="index, follow" />
-
+  <meta name="description" content="Keizer Rugrats Playschool is a private early learning environment for ages 2–5 in Keizer, Oregon. Structured, play-based curriculum in a calm small-group setting. Opening May 2026 (anticipated)." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://keizerrugrats.com/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Keizer Rugrats Playschool | Preschool & Daycare in Keizer, Oregon" />
-  <meta property="og:description" content="Small-group preschool & daycare (ages 2–5) in Keizer, Oregon. Play-based learning, safe routines, and a warm home-like setting. Limited enrollment." />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Keizer Rugrats Playschool | Keizer, Oregon" />
+  <meta property="og:description" content="Private early learning environment (ages 2–5). Structured, play-based curriculum in a calm small-group setting. Opening May 2026 (anticipated)." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://keizerrugrats.com/" />
   <meta property="og:image" content="https://keizerrugrats.com/new-logo.png" />
 
-  <!-- Optional (helps avoid favicon 404; swap later if you create a real favicon) -->
-  <link rel="icon" href="new-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keizer Rugrats Playschool | Keizer, Oregon" />
+  <meta name="twitter:description" content="Private early learning environment (ages 2–5). Structured, play-based curriculum in a calm small-group setting. Opening May 2026 (anticipated)." />
+  <meta name="twitter:image" content="https://keizerrugrats.com/new-logo.png" />
 
   <style>
     :root{
-      --navy:#10263F;
-      --navy2:#081a2c;
-      --cream:#F3EFE6;
-      --paper:#ffffff;
-      --gold:#C9A34A;
-      --text:#1c1c1c;
-      --muted:#5b5b5b;
-      --line:rgba(16,38,63,.12);
-      --shadow:0 24px 70px rgba(0,0,0,.16);
-      --radius:26px;
-      --softbg:#F7F4EE;
+      --bg: #fbf6ea;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #1f3a5f;
+      --border: rgba(31,41,55,.12);
+      --shadow: 0 8px 30px rgba(17,24,39,.08);
+      --radius: 18px;
+      --max: 1040px;
     }
-
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color:var(--text);
-      /* Reduced beige: cleaner premium cream */
-      background:
-        radial-gradient(1200px 500px at 20% 0%, rgba(201,163,74,.18), transparent 65%),
-        linear-gradient(180deg, var(--navy) 0%, var(--navy) 295px, var(--softbg) 295px);
-    }
-
-    a{color:inherit}
-    .wrap{max-width:1180px;margin:0 auto;padding:22px 20px 84px}
-
-    /* Top bar */
-    .topbar{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:14px; padding:8px 0 14px;
-    }
-    .brand-mini{
-      display:flex;align-items:center;gap:12px;
-      color:#fff;
-      text-decoration:none;
-    }
-    .brand-mini span{
-      font-weight:750;letter-spacing:.2px;
-      line-height:1.1;
-    }
-    .pillrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .pill{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 14px;border-radius:999px;
-      text-decoration:none;font-weight:700;
-      border:1px solid rgba(255,255,255,.28);
-      color:#fff;background:rgba(255,255,255,.08);
-      transition:.2s ease;
-    }
-    .pill:hover{transform:translateY(-2px);background:rgba(255,255,255,.14)}
-    .pill.primary{
-      border-color:transparent;
-      background:linear-gradient(135deg, rgba(201,163,74,.95), rgba(201,163,74,.75));
-      color:var(--navy);
-    }
-
-    /* Card shell */
-    .card{
-      background:var(--paper);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.7);
-    }
-
-    /* Hero */
-    .hero{
-      padding:32px 42px 18px; /* tightened */
-      text-align:center;
-      background:
-        radial-gradient(900px 300px at 50% 0%, rgba(16,38,63,.06), transparent 70%);
-    }
-    .logo{
-      /* increased slightly */
-      width:min(760px, 96%);
-      height:auto;
-      margin:0 auto 10px;
-      display:block;
-    }
-
-    /* Emotional headline */
-    .headline{
-      margin:0 auto 10px;
-      max-width:1040px; /* helps keep one line on desktop when it fits */
-      color:var(--navy);
-      font-size:26px;
-      font-weight:900; /* increased heading weight */
-      letter-spacing:.2px;
-      line-height:1.15;
-      text-wrap:balance;
-    }
-    @media (max-width: 560px){
-      .headline{
-        font-size:22px; /* encourages wrap on phones */
-        line-height:1.2;
-      }
-    }
-
-    /* Thicker gold accent divider */
-    .accent-line{
-      width:140px;
-      height:6px; /* thicker */
-      margin:0 auto 14px;
-      border-radius:999px;
-      background: linear-gradient(
-        90deg,
-        rgba(201,163,74,.35),
-        rgba(201,163,74,.95),
-        rgba(201,163,74,.35)
-      );
-      box-shadow:0 10px 20px rgba(201,163,74,.18);
-    }
-
-    .subhead{
-      margin:0 auto 14px; /* tightened */
-      max-width:850px;
-      color:var(--navy);
-      font-size:19px;
+      background:linear-gradient(180deg, var(--bg), #ffffff);
       line-height:1.55;
     }
-    .chips{
-      display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
-      margin:0 0 14px; /* tightened */
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      position:sticky; top:0;
+      background:rgba(255,255,255,.82);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+      z-index:10;
     }
-    .chip{
-      font-size:13px;font-weight:700;
-      padding:9px 12px;border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(243,239,230,.55);
-      color:var(--navy);
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
     }
-    .notice{
-      margin:12px auto 0;
-      max-width:820px;
-      padding:12px 14px;
-      border-radius:16px;
-      border:1px dashed rgba(16,38,63,.22);
-      background:rgba(16,38,63,.03);
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.45;
-    }
-
-    /* Section grid */
-    .content{
-      padding:0 42px 36px; /* tightened */
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px; /* tightened */
-      margin-top:14px;
-    }
-    @media (max-width: 960px){
-      .hero{padding:26px 18px 16px}
-      .content{padding:0 18px 26px}
-      .grid{grid-template-columns:1fr}
-      .topbar{flex-direction:column;align-items:flex-start}
-      .pillrow{justify-content:flex-start}
-    }
-
-    .panel{
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:20px; /* tightened */
-      background:linear-gradient(180deg, rgba(243,239,230,.55), #fff);
-      position:relative;
-    }
-    .panel h2{
-      margin:0 0 10px;
-      color:var(--navy);
-      font-size:20px;
-      font-weight:900; /* increased */
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:800;
       letter-spacing:.2px;
     }
-    .panel p{margin:0;color:#2c2c2c;line-height:1.65}
-    .panel .small{color:var(--muted);font-size:14px;margin-top:10px}
-
-    .list{
-      margin:12px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
+    .brand img{
+      width:44px; height:44px; object-fit:contain;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid var(--border);
+      padding:6px;
     }
-    .list li{
-      display:flex;gap:10px;align-items:flex-start;
-      line-height:1.5;
+    .navlinks{
+      display:flex; flex-wrap:wrap; gap:14px;
+      font-weight:700;
+      font-size:14px;
+      color:var(--muted);
     }
-    .dot{
-      width:10px;height:10px;border-radius:50%;
-      margin-top:6px;flex:0 0 auto;
-      background:linear-gradient(135deg, rgba(201,163,74,.95), rgba(201,163,74,.55));
-      border:1px solid rgba(16,38,63,.18);
-    }
-
-    /* Big CTA */
-    .cta{
-      margin-top:18px; /* tightened */
-      border-radius:24px;
-      padding:22px;
-      color:#fff;
-      background:
-        radial-gradient(700px 260px at 10% 0%, rgba(201,163,74,.22), transparent 60%),
-        linear-gradient(135deg, var(--navy), var(--navy2));
-      border:1px solid rgba(255,255,255,.12);
-      position:relative;
-    }
-    .cta h2{margin:0 0 8px;font-size:22px;font-weight:900;letter-spacing:.2px}
-    .cta p{margin:0;color:rgba(255,255,255,.88);line-height:1.6}
-    .ctarow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .navlinks a{color:var(--muted)}
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 16px;border-radius:16px;
-      text-decoration:none;font-weight:800;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.10);
-      color:#fff;
-      transition:.2s ease;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-weight:800;
+      font-size:14px;
+      box-shadow: 0 4px 16px rgba(17,24,39,.06);
+      white-space:nowrap;
     }
-    .btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.14)}
-    .btn.light{
-      background:#fff;color:var(--navy);
+    .btn.primary{
+      background:var(--accent);
+      color:#fff;
       border-color:transparent;
     }
-
-    /* Full-width sections */
-    .full{
-      margin-top:18px; /* tightened */
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:22px; /* tightened */
-      background:#fff;
-      position:relative;
-      overflow:hidden;
-    }
-    /* subtle section separator accent */
-    .full::before{
-      content:"";
-      position:absolute;
-      left:22px; right:22px; top:0;
-      height:1px;
-      background:linear-gradient(90deg, transparent, rgba(201,163,74,.45), transparent);
-      opacity:.9;
-    }
-
-    .full h2{margin:0 0 12px;color:var(--navy);font-size:20px;font-weight:900}
-    .cols{
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
+    .hero{
       display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:14px;
+      grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+      align-items:start;
+      margin-top:12px;
     }
-    @media (max-width: 960px){
-      .cols{grid-template-columns:1fr}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      header{position:relative}
     }
-    .box{
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:16px;
-      background:linear-gradient(180deg, rgba(16,38,63,.02), rgba(243,239,230,.26));
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
     }
-    .box h3{margin:0 0 6px;color:var(--navy);font-size:16px;font-weight:900}
-    .box p{margin:0;color:#2c2c2c;line-height:1.6;font-size:14.5px}
-
-    /* FAQ */
-    details{
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:14px 16px;
-      background:rgba(243,239,230,.35);
+    .kicker{
+      font-weight:900;
+      color:var(--accent);
+      letter-spacing:.4px;
+      text-transform:uppercase;
+      font-size:12px;
+      margin:0 0 10px;
     }
-    details + details{margin-top:10px}
-    summary{
+    h1{
+      font-size:40px;
+      line-height:1.1;
+      margin:0 0 12px;
+      letter-spacing:-.6px;
+    }
+    @media (max-width: 520px){ h1{font-size:32px} }
+    .lede{font-size:17px; color:var(--muted); margin:0 0 18px}
+    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 6px}
+    .pill{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:8px 10px;
+      font-weight:800;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .section{margin-top:26px}
+    h2{margin:0 0 10px; font-size:22px; letter-spacing:-.2px}
+    h3{margin:16px 0 6px; font-size:16px}
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    @media (max-width: 900px){ .grid2{grid-template-columns:1fr} }
+    ul{margin:10px 0 0 20px; color:var(--muted)}
+    li{margin:8px 0}
+    .fineprint{font-size:13px; color:var(--muted); margin-top:10px}
+    .faq details{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px 14px;
+      background:#fff;
+      margin:10px 0;
+    }
+    .faq summary{
       cursor:pointer;
       font-weight:900;
-      color:var(--navy);
+      color:var(--text);
+      list-style:none;
     }
-    details p{margin:10px 0 0;color:#2c2c2c;line-height:1.6}
-
-    /* Footer */
+    .faq summary::-webkit-details-marker{display:none}
     .footer{
-      text-align:center;
-      margin-top:22px;
-      color:rgba(255,255,255,.72);
-      font-size:13px;
-      padding:16px 0 0;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:22px 18px 34px;
+      color:var(--muted);
+      font-size:14px;
     }
-    .footer a{color:rgba(255,255,255,.85)}
-    .sr-only{
-      position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+    .footer hr{border:none; border-top:1px solid var(--border); margin:18px 0}
+    .contactbox p{margin:6px 0}
+    .muted{color:var(--muted)}
+    .notice{
+      border-left:4px solid var(--accent);
+      padding:10px 12px;
+      background:rgba(31,58,95,.06);
+      border-radius:12px;
+      color:var(--muted);
+      font-weight:800;
+      margin-top:12px;
+    }
+    .smallcaps{
+      letter-spacing:.35px;
+      text-transform:uppercase;
+      font-size:12px;
+      font-weight:900;
+      color:var(--muted);
     }
   </style>
 
-  <!-- Google Analytics (keep as-is) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q121HS1FCX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Q121HS1FCX');
-  </script>
-
-  <!-- Local Business Schema (NO street address) -->
+  <!-- Schema (helps search) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ChildCare",
-    "additionalType": [
-      "https://schema.org/Preschool"
-    ],
     "name": "Keizer Rugrats Playschool",
     "url": "https://keizerrugrats.com/",
-    "logo": "https://keizerrugrats.com/new-logo.png",
     "image": "https://keizerrugrats.com/new-logo.png",
-    "email": "info@keizerrugrats.com",
-    "telephone": "+1-503-989-9588",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Keizer",
       "addressRegion": "OR",
       "addressCountry": "US"
     },
-    "areaServed": ["Keizer, OR","Salem, OR"],
+    "areaServed": "Keizer, OR",
+    "description": "Private early learning environment for ages 2–5 in Keizer, Oregon. Structured, play-based curriculum in a calm small-group setting. Opening May 2026 (anticipated).",
+    "telephone": "+1-503-989-9588",
+    "email": "info@keizerrugrats.com",
     "sameAs": [
-      "https://www.facebook.com/KeizerRugratsPlaySchool/",
-      "https://www.instagram.com/keizerrugratsplayschool/"
+      "https://www.instagram.com/keizerrugratsplayschool/",
+      "https://www.facebook.com/KeizerRugratsPlaySchool/"
     ]
   }
   </script>
 </head>
 
 <body>
-  <h1 class="sr-only">Keizer Rugrats Playschool — Preschool & Daycare in Keizer, Oregon</h1>
-
-  <div class="wrap">
-    <div class="topbar">
-      <a class="brand-mini" href="#top" aria-label="Keizer Rugrats Playschool">
-        <span>Keizer Rugrats Playschool<br><span style="font-weight:650;opacity:.82">Preschool & Daycare (Ages 2–5)</span></span>
-      </a>
-
-      <div class="pillrow">
-        <a class="pill" href="#programs">Programs</a>
-        <a class="pill" href="#rhythm">Daily Rhythm</a>
-        <a class="pill" href="#faq">FAQ</a>
-        <a class="pill" href="https://www.facebook.com/KeizerRugratsPlaySchool/" target="_blank" rel="noopener">Facebook</a>
-        <a class="pill" href="https://www.instagram.com/keizerrugratsplayschool/" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill primary" href="#tour">Schedule a Tour</a>
+  <header>
+    <div class="nav" role="navigation" aria-label="Primary navigation">
+      <div class="brand">
+        <img src="new-logo.png" alt="Keizer Rugrats Playschool logo" />
+        <span>Keizer Rugrats Playschool</span>
       </div>
+
+      <nav class="navlinks" aria-label="Site links">
+        <a href="#programs">Programs</a>
+        <a href="#rhythm">Daily Rhythm</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn primary" href="#contact">Request Info</a>
     </div>
+  </header>
 
-    <main id="top" class="card">
-      <section class="hero">
-        <img src="new-logo.png" class="logo" alt="Keizer Rugrats Playschool Logo" />
-
-        <h2 class="headline">An Early Learning Experience Built on Safety, Structure, and Care.</h2>
-        <div class="accent-line" aria-hidden="true"></div>
-
-        <p class="subhead">
-          <strong>Preschool & Daycare in Keizer, Oregon</strong><br>
-          Play-based learning with a structured daily rhythm — in a calm, small-group setting.
+  <main class="wrap">
+    <section class="hero" aria-label="Hero">
+      <div class="card">
+        <p class="kicker">Keizer, Oregon</p>
+        <h1>Private early learning—built with intention.</h1>
+        <p class="lede">
+          Keizer Rugrats Playschool is a calm, small-group early learning environment for children ages 2–5.
+          Our approach is structured, play-based, and designed to build independence, emotional confidence,
+          and strong foundational skills.
         </p>
 
-        <div class="chips" aria-label="Key highlights">
-          <span class="chip">Ages 2–5</span>
-          <span class="chip">Limited enrollment (max 16)</span>
-          <span class="chip">Certified Family Child Care Home</span>
-          <span class="chip">Brightwheel parent communication</span>
+        <div class="pillrow" aria-label="Key details">
+          <span class="pill">Ages 2–5</span>
+          <span class="pill">Small-group setting</span>
+          <span class="pill">Structured, play-based</span>
+          <span class="pill">Clear communication</span>
         </div>
 
-        <div class="notice">
-          <strong>Opening Spring 2026:</strong> We plan to open mid-April to May.
-          Tours and enrollment conversations are available now.
-        </div>
-      </section>
-
-      <section class="content">
-        <div class="grid">
-          <div class="panel">
-            <h2>About Our Program</h2>
-            <p>
-              Keizer Rugrats Playschool is a <strong>hybrid preschool & daycare</strong> for children ages 2–5.
-              We blend preschool foundations (language, early math, routines, and readiness skills) with the
-              comfort and consistency of small-group care.
-            </p>
-            <p class="small">
-              Our program operates in a dedicated single-family home used exclusively for early learning — no one lives on-site.
-            </p>
-
-            <ul class="list" aria-label="What families can expect">
-              <li><span class="dot"></span><span>Warm, home-like environment with clear routines</span></li>
-              <li><span class="dot"></span><span>Play-based learning with intentional teaching moments</span></li>
-              <li><span class="dot"></span><span>Limited enrollment so children feel known and supported</span></li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h2>At a Glance</h2>
-            <ul class="list">
-              <li><span class="dot"></span><span><strong>Ages served:</strong> 2–5 years</span></li>
-              <li><span class="dot"></span><span><strong>Setting:</strong> small-group care (max 16)</span></li>
-              <li><span class="dot"></span><span><strong>Approach:</strong> play-based, positive guidance, consistent rhythm</span></li>
-              <li><span class="dot"></span><span><strong>Meals:</strong> CACFP-aligned (as applicable)</span></li>
-              <li><span class="dot"></span><span><strong>Parent communication:</strong> Brightwheel updates + messaging</span></li>
-            </ul>
-
-            <div class="cta" id="tour">
-              <h2>Schedule a Tour</h2>
-              <p>
-                Because enrollment is limited, openings can fill quickly.
-                Reach out to check availability and schedule a visit.
-              </p>
-              <div class="ctarow">
-                <a class="btn light" href="tel:15039899588">Call / Text: 503-989-9588</a>
-                <a class="btn" href="mailto:info@keizerrugrats.com?subject=Tour%20Request%20-%20Keizer%20Rugrats%20Playschool">Email: info@keizerrugrats.com</a>
-              </div>
-            </div>
-
-            <p class="small" style="margin-top:12px">
-              Prefer messaging? Include your child’s age and desired start date for the fastest reply.
-            </p>
-          </div>
+        <div class="notice" role="note" aria-label="Opening timeline notice">
+          <strong>Opening May 2026 (anticipated).</strong>
+          We’re currently in our founding phase and welcome inquiries from families seeking a thoughtful, structured early learning environment.
         </div>
 
-        <!-- Programs -->
-        <section class="full" id="programs" aria-label="Programs">
-          <h2>Programs</h2>
-          <div class="cols">
-            <div class="box">
-              <h3>Playschool (Ages 2–5)</h3>
-              <p>
-                A small-group early learning environment that blends structured routines with hands-on play.
-                We focus on language, early math, self-help skills, and social-emotional growth.
-              </p>
-            </div>
-            <div class="box">
-              <h3>Kindergarten Readiness</h3>
-              <p>
-                Early literacy foundations, fine-motor practice, attention skills, and classroom routines—taught
-                gently through play and daily repetition.
-              </p>
-            </div>
-            <div class="box">
-              <h3>Family Communication</h3>
-              <p>
-                Brightwheel updates and messaging, plus clear expectations and consistent routines so families
-                feel informed and confident.
-              </p>
-            </div>
-          </div>
+        <div class="ctaRow">
+          <a class="btn primary" href="#contact">Request Information</a>
+          <a class="btn" href="#programs">Explore Programs</a>
+        </div>
 
-          <p class="small" style="margin-top:12px;color:var(--muted)">
-            Note: Specific hours, tuition, and enrollment terms are provided during your tour and enrollment conversation.
-          </p>
-        </section>
-
-        <!-- Daily Rhythm -->
-        <section class="full" id="rhythm" aria-label="Daily Rhythm">
-          <h2>Our Daily Rhythm</h2>
-          <div class="cols">
-            <div class="box">
-              <h3>Arrival & Exploration</h3>
-              <p>Warm transitions, handwashing, and calming invitations to play.</p>
-            </div>
-            <div class="box">
-              <h3>Circle Time & Learning Blocks</h3>
-              <p>Songs, stories, movement, early literacy, and guided play-based learning.</p>
-            </div>
-            <div class="box">
-              <h3>Outdoor & Creative Studio</h3>
-              <p>Gross motor play, nature exploration, art, sensory, and hands-on discovery.</p>
-            </div>
-          </div>
-
-          <div class="notice" style="margin-top:14px">
-            We keep routines predictable because children thrive when they know what comes next.
-          </div>
-        </section>
-
-        <!-- Safety + Standards -->
-        <section class="full" id="safety" aria-label="Safety and Standards">
-          <h2>Safety, Quality & Care Standards</h2>
-          <div class="cols">
-            <div class="box">
-              <h3>Clear Policies</h3>
-              <p>Consistent guidance, firm boundaries, and age-appropriate expectations.</p>
-            </div>
-            <div class="box">
-              <h3>Health & Wellness</h3>
-              <p>Daily cleaning routines and wellness guidelines to support a healthy environment.</p>
-            </div>
-            <div class="box">
-              <h3>Small Group Focus</h3>
-              <p>Limited enrollment so each child is known, supported, and carefully supervised.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="full" id="faq" aria-label="Frequently Asked Questions">
-          <h2>FAQ</h2>
-
-          <details>
-            <summary>What ages do you accept?</summary>
-            <p>We serve children ages <strong>2–5</strong> in a small-group playschool setting.</p>
-          </details>
-
-          <details>
-            <summary>Is this a daycare or a preschool?</summary>
-            <p>
-              We’re a <strong>hybrid preschool & daycare</strong>—children receive preschool foundations and a
-              consistent daily rhythm, with the care structure families need.
-            </p>
-          </details>
-
-          <details>
-            <summary>How do I check availability?</summary>
-            <p>
-              The fastest way is to <a href="#tour">schedule a tour</a>. Please include your child’s age and desired start date.
-            </p>
-          </details>
-
-          <details>
-            <summary>Do you share your address online?</summary>
-            <p>
-              We do not publish a street address online. Location details are shared during the tour scheduling process.
-            </p>
-          </details>
-        </section>
-
-        <!-- Contact -->
-        <section class="full" id="contact" aria-label="Contact">
-          <h2>Contact</h2>
-          <div class="cols">
-            <div class="box">
-              <h3>Call / Text</h3>
-              <p><a href="tel:15039899588">503-989-9588</a></p>
-            </div>
-            <div class="box">
-              <h3>Email</h3>
-              <p><a href="mailto:info@keizerrugrats.com">info@keizerrugrats.com</a></p>
-            </div>
-            <div class="box">
-              <h3>Social</h3>
-              <p>
-                <a href="https://www.facebook.com/KeizerRugratsPlaySchool/" target="_blank" rel="noopener">Facebook</a>
-                &nbsp;•&nbsp;
-                <a href="https://www.instagram.com/keizerrugratsplayschool/" target="_blank" rel="noopener">Instagram</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="cta" style="margin-top:16px">
-            <h2>Limited Enrollment</h2>
-            <p>
-              We keep class sizes intentionally small to protect quality and consistency.
-              Reach out early to discuss enrollment.
-            </p>
-            <div class="ctarow">
-              <a class="btn light" href="tel:15039899588">Call / Text</a>
-              <a class="btn" href="mailto:info@keizerrugrats.com?subject=Enrollment%20Inquiry%20-%20Keizer%20Rugrats%20Playschool">Email Us</a>
-            </div>
-          </div>
-        </section>
-
-      </section>
-    </main>
-
-    <div class="footer">
-      <div>© <span id="year"></span> Keizer Rugrats Playschool • Keizer, Oregon</div>
-      <div style="margin-top:6px">
-        <a href="#top">Back to top</a>
+        <p class="fineprint">
+          Details such as hours and enrollment steps will be shared as we move closer to opening.
+        </p>
       </div>
-    </div>
-  </div>
+
+      <aside class="card contactbox" aria-label="Quick contact">
+        <h2 style="margin-top:0">Contact</h2>
+        <p class="muted">Questions or interest in our May opening?</p>
+        <p><strong>Call / Text:</strong> <a href="tel:15039899588">503-989-9588</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@keizerrugrats.com">info@keizerrugrats.com</a></p>
+
+        <p class="fineprint">
+          For the fastest reply, include your child’s age and your desired start timeframe.
+        </p>
+
+        <p class="smallcaps" style="margin-top:16px;">Social</p>
+        <p style="margin:6px 0;">
+          <a href="https://www.facebook.com/KeizerRugratsPlaySchool/" target="_blank" rel="noopener">Facebook</a>
+          &nbsp;•&nbsp;
+          <a href="https://www.instagram.com/keizerrugratsplayschool/" target="_blank" rel="noopener">Instagram</a>
+        </p>
+      </aside>
+    </section>
+
+    <section class="section grid2" aria-label="About and standards">
+      <div class="card">
+        <h2>About Our Program</h2>
+        <p class="muted" style="margin:0">
+          We’re building Keizer Rugrats Playschool as a private early learning environment that values calm leadership,
+          predictable routines, and intentional learning experiences. Children thrive when expectations are clear and days feel secure.
+        </p>
+
+        <h3>Designed for calm, consistent days</h3>
+        <ul>
+          <li>Predictable routines with clear expectations</li>
+          <li>Play-based learning with intentional teaching moments</li>
+          <li>Small-group setting so children feel known and supported</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Quality & Care Standards</h2>
+        <ul>
+          <li><strong>Clear guidance:</strong> consistent boundaries and respectful redirection</li>
+          <li><strong>Health & wellness:</strong> daily cleaning routines and wellness guidelines</li>
+          <li><strong>Family communication:</strong> consistent updates and clear expectations</li>
+        </ul>
+        <p class="fineprint">
+          We do not publish a street address online. Location details are shared through the inquiry process.
+        </p>
+      </div>
+    </section>
+
+    <section id="programs" class="section" aria-label="Programs">
+      <div class="card">
+        <h2>Programs</h2>
+
+        <h3>Playschool (Ages 2–5)</h3>
+        <p class="muted">
+          A small-group early learning environment blending structured routines with hands-on play.
+          Our focus includes language development, foundational concepts, independence, and social-emotional growth.
+        </p>
+
+        <h3>Foundational Skills</h3>
+        <p class="muted">
+          Early literacy exposure, early math concepts, fine-motor practice, attention skills, and classroom routines
+          — taught gently through play and daily repetition.
+        </p>
+
+        <h3>Family Communication</h3>
+        <p class="muted">
+          Clear communication and consistent expectations so families feel informed and confident.
+        </p>
+
+        <p class="fineprint">
+          Hours, tuition, and enrollment details will be shared as we move closer to opening.
+        </p>
+      </div>
+    </section>
+
+    <section id="rhythm" class="section" aria-label="Daily rhythm">
+      <div class="card">
+        <h2>Our Daily Rhythm</h2>
+
+        <h3>Arrival & Exploration</h3>
+        <p class="muted">Warm transitions and calm invitations to play.</p>
+
+        <h3>Circle Gathering & Learning Blocks</h3>
+        <p class="muted">Songs, stories, movement, and guided play-based learning.</p>
+
+        <h3>Outdoor Movement & Creative Studio</h3>
+        <p class="muted">Gross motor play, art, sensory experiences, and hands-on discovery.</p>
+
+        <p class="muted" style="margin-top:14px; font-weight:800;">
+          We keep routines predictable because children thrive when they know what comes next.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq" aria-label="FAQ">
+      <div class="card">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>What ages do you serve?</summary>
+          <p class="muted">We serve children ages 2–5 in a small-group playschool setting.</p>
+        </details>
+
+        <details>
+          <summary>Are you currently open?</summary>
+          <p class="muted">
+            We are preparing for an anticipated May 2026 opening and are currently in our founding phase.
+            Updates will be shared as we move closer to opening.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I learn more?</summary>
+          <p class="muted">
+            Reach out by text, call, or email. Please include your child’s age and your desired start timeframe.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do you share your address online?</summary>
+          <p class="muted">
+            We do not publish a street address online. Location details are shared through the inquiry process.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-label="Contact section">
+      <div class="card">
+        <h2>Request Information</h2>
+        <p class="muted">
+          We welcome inquiries from families seeking a calm, structured early learning environment.
+          Please include your child’s age and your desired start timeframe.
+        </p>
+
+        <div class="grid2">
+          <div>
+            <h3>Call / Text</h3>
+            <p><a href="tel:15039899588">503-989-9588</a></p>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p><a href="mailto:info@keizerrugrats.com">info@keizerrugrats.com</a></p>
+          </div>
+        </div>
+
+        <p class="fineprint">
+          Follow along:
+          <a href="https://www.facebook.com/KeizerRugratsPlaySchool/" target="_blank" rel="noopener">Facebook</a> •
+          <a href="https://www.instagram.com/keizerrugratsplayschool/" target="_blank" rel="noopener">Instagram</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Footer">
+    <hr />
+    <div class="muted">© <span id="year"></span> Keizer Rugrats Playschool • Keizer, Oregon</div>
+  </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
