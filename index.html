@@ -1,103 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Keizer Rugrats Playschool | Private Preschool in Keizer, Oregon</title>
-<meta name="description" content="Keizer Rugrats Playschool is a structured, play-based private preschool in Keizer, Oregon serving children ages 2–5. Certified Family Child Care Home opening May 2026.">
+<meta name="description" content="Keizer Rugrats Playschool is a structured, play-based private preschool in Keizer, Oregon serving children ages 2–5. Opening May 2026 (anticipated)." />
+<link rel="canonical" href="https://keizerrugrats.com/" />
+
+<!-- Social preview -->
+<meta property="og:title" content="Keizer Rugrats Playschool | Private Preschool in Keizer" />
+<meta property="og:description" content="Structured, play-based private preschool for ages 2–5 in Keizer, Oregon. Opening May 2026 (anticipated)." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://keizerrugrats.com/" />
+<meta property="og:image" content="https://keizerrugrats.com/new-logo.png" />
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #e9e3d7;
-  color: #1f2a44;
+:root{
+  --navy:#24385b;
+  --cream:#f3efe6;
+  --page:#e9e3d7;
+  --text:#1f2a44;
+  --muted:#4f5a73;
+  --white:#ffffff;
+  --radius:20px;
+  --shadow:0 18px 40px rgba(0,0,0,.07);
+  --max:1000px;
 }
 
-header {
-  background-color: #24385b;
-  padding: 60px 20px 40px;
-  text-align: center;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background:var(--page);
+  color:var(--text);
+  line-height:1.65;
 }
 
-header img {
-  width: 260px;
+header{
+  background:var(--navy);
+  padding:54px 18px 34px;
+  text-align:center;
 }
 
-.nav-bubbles {
-  margin-top: 25px;
+header .logo{
+  width:260px;
+  max-width:80vw;
+  height:auto;
+  display:block;
+  margin:0 auto 18px;
 }
 
-.nav-bubbles a {
-  display: inline-block;
-  background-color: #f3efe6;
-  color: #24385b;
-  padding: 12px 22px;
-  margin: 8px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
+.nav-bubbles{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:18px;
 }
 
-.section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #f3efe6;
-  border-radius: 20px;
+.nav-bubbles a{
+  display:inline-block;
+  background:var(--cream);
+  color:var(--navy);
+  padding:12px 20px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  transition:transform .15s ease, background .15s ease;
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+.nav-bubbles a:hover{
+  background:var(--white);
+  transform:translateY(-2px);
 }
 
-h2 {
-  margin-top: 0;
+.section{
+  max-width:var(--max);
+  margin:38px auto;
+  padding:38px;
+  background:var(--cream);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 
-.button {
-  display: inline-block;
-  background-color: #24385b;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-top: 20px;
+h1{
+  font-size:42px;
+  margin:0 0 14px;
+  letter-spacing:-.6px;
 }
 
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+h2{
+  margin:0 0 10px;
+  font-size:26px;
 }
 
-.pillar {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
+p{margin:12px 0}
+
+.lead{
+  font-size:18px;
+  color:var(--muted);
 }
 
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 14px;
+.notice{
+  background:rgba(36,56,91,.08);
+  border-left:5px solid var(--navy);
+  padding:16px 16px;
+  border-radius:16px;
+  margin-top:18px;
+  color:var(--muted);
+  font-weight:650;
 }
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+
+.button{
+  display:inline-block;
+  background:var(--navy);
+  color:var(--white);
+  padding:14px 26px;
+  border-radius:999px;
+  text-decoration:none;
+  margin-top:18px;
+  font-weight:800;
+  border:none;
+  cursor:pointer;
+}
+
+.pillars{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:18px;
+  margin-top:22px;
+}
+
+.pillar{
+  background:var(--white);
+  padding:22px;
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+}
+
+.pillar h3{
+  margin:0 0 8px;
+  font-size:16px;
+}
+
+ul{margin:10px 0 0 20px; color:var(--muted)}
+li{margin:8px 0}
+
+.form{
+  margin-top:18px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+@media (max-width: 860px){
+  .section{padding:26px}
+  h1{font-size:34px}
+  .form-grid{grid-template-columns:1fr}
+}
+
+label{
+  display:block;
+  font-weight:800;
+  color:var(--muted);
+  font-size:13px;
+  margin:0 0 6px;
+}
+
+input, textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius:12px;
+  border:1px solid #cfd5dc;
+  background:var(--white);
+  font-size:14px;
+}
+
+textarea{min-height:120px; resize:vertical}
+
+.small{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:10px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px 50px;
+  color:var(--muted);
+  font-size:14px;
 }
 </style>
+
+<!-- Basic LocalBusiness schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ChildCare",
+  "name":"Keizer Rugrats Playschool",
+  "url":"https://keizerrugrats.com/",
+  "image":"https://keizerrugrats.com/new-logo.png",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Keizer",
+    "addressRegion":"OR",
+    "addressCountry":"US"
+  },
+  "telephone":"+1-503-989-9588",
+  "email":"info@keizerrugrats.com",
+  "description":"Structured, play-based private preschool for ages 2–5 in Keizer, Oregon. Opening May 2026 (anticipated)."
+}
+</script>
 </head>
 
 <body>
 
 <header>
-  <img src="new-logo.png" alt="Keizer Rugrats Playschool Logo">
+  <img src="new-logo.png" alt="Keizer Rugrats Playschool Logo" class="logo" />
   <div class="nav-bubbles">
     <a href="#program">Programs</a>
     <a href="#rhythm">Daily Rhythm</a>
@@ -107,100 +231,158 @@ input, textarea {
   </div>
 </header>
 
+<!-- HERO -->
 <section class="section">
-<h1>Private Preschool — Built With Intention.</h1>
+  <h1>Private Preschool — Built With Intention.</h1>
 
-<p>Keizer Rugrats Playschool is a structured, play-based private preschool in Keizer, Oregon serving children ages 2–5. As a Certified Family Child Care Home, we provide a calm, consistent, small-group learning environment designed to build independence, emotional confidence, and strong foundational skills.</p>
+  <p class="lead">
+    Keizer Rugrats Playschool is a structured, play-based private preschool in Keizer, Oregon serving children ages 2–5.
+    We provide a calm, consistent, small-group learning environment designed to build independence, emotional confidence,
+    and strong foundational skills.
+  </p>
 
-<p><strong>Opening May 2026.</strong> We are currently welcoming founding families to join our interest list.</p>
+  <div class="notice">
+    <strong>Opening May 2026 (anticipated).</strong> We are currently welcoming interest-list families as we prepare for licensing and opening steps.
+  </div>
 
-<a href="#waitlist" class="button">Join the Founding Waitlist</a>
+  <a href="#waitlist" class="button">Join the Interest List</a>
 </section>
 
+<!-- PROGRAM -->
 <section id="program" class="section">
-<h2>Our Program Philosophy</h2>
+  <h2>Our Program Philosophy</h2>
 
-<p>Children thrive when expectations are clear and days feel predictable. Our approach blends intentional play, structured routines, respectful guidance, and developmentally appropriate learning experiences.</p>
+  <p class="lead" style="margin-top:0">
+    Children thrive when expectations are clear and days feel predictable.
+    Our approach blends intentional play, structured routines, respectful guidance, and developmentally appropriate learning experiences.
+  </p>
 
-<div class="pillars">
-  <div class="pillar">
-    <h3>Structured Rhythm</h3>
-    <p>Predictable daily flow including circle time, small group learning, outdoor movement, creative studio time, and quiet rest.</p>
+  <div class="pillars">
+    <div class="pillar">
+      <h3>Structured Rhythm</h3>
+      <p>Predictable daily flow including circle time, learning centers, outdoor movement, creative studio time, and quiet rest.</p>
+    </div>
+    <div class="pillar">
+      <h3>Positive Guidance</h3>
+      <p>Clear boundaries, modeling, redirection, and logical consequences—never shaming, threats, or corporal punishment.</p>
+    </div>
+    <div class="pillar">
+      <h3>Health & Wellness</h3>
+      <p>Daily cleaning routines, illness exclusion standards, and thoughtful wellness practices to support a safe learning environment.</p>
+    </div>
+    <div class="pillar">
+      <h3>Small Group Care</h3>
+      <p>Limited enrollment by design so children receive focused attention and meaningful connection.</p>
+    </div>
   </div>
-  <div class="pillar">
-    <h3>Positive Guidance</h3>
-    <p>Clear boundaries, modeling, redirection, and logical consequences. We do not use shaming, threats, or corporal punishment.</p>
-  </div>
-  <div class="pillar">
-    <h3>Health & Wellness</h3>
-    <p>Daily cleaning routines, illness exclusion standards, CACFP-aligned meals, and strong safety compliance.</p>
-  </div>
-  <div class="pillar">
-    <h3>Small Group Care</h3>
-    <p>Limited enrollment ensures children receive focused attention and meaningful connection.</p>
-  </div>
-</div>
 </section>
 
+<!-- RHYTHM -->
 <section id="rhythm" class="section">
-<h2>Daily Rhythm</h2>
+  <h2>Daily Rhythm</h2>
 
-<p>Our structured preschool day includes:</p>
+  <p class="lead" style="margin-top:0">Our structured preschool day includes:</p>
 
-<ul>
-<li>Arrival & Free Exploration</li>
-<li>Breakfast & Morning Meeting</li>
-<li>Creative Centers & Small Groups</li>
-<li>Outdoor Gross Motor Play</li>
-<li>Lunch & Story Wind Down</li>
-<li>Rest & Recharge</li>
-<li>Afternoon Adventures</li>
-<li>Closing Centers & Family Pick-Up</li>
-</ul>
+  <ul>
+    <li>Arrival & Free Exploration</li>
+    <li>Morning Meeting / Circle Time</li>
+    <li>Creative Centers & Small Groups</li>
+    <li>Outdoor Gross Motor Play</li>
+    <li>Lunch & Story Wind-Down</li>
+    <li>Rest & Recharge</li>
+    <li>Afternoon Centers & Activities</li>
+    <li>Closing Routine & Family Pick-Up</li>
+  </ul>
 
-<p>Each block is designed intentionally to support cognitive, emotional, and physical development.</p>
+  <p class="small">
+    Each block is designed intentionally to support cognitive, emotional, and physical development.
+  </p>
 </section>
 
+<!-- STANDARDS -->
 <section id="standards" class="section">
-<h2>Safety & Care Standards</h2>
+  <h2>Safety & Care Standards</h2>
 
-<p>We operate as a Certified Family Child Care Home in compliance with Oregon licensing standards.</p>
+  <p class="lead" style="margin-top:0">
+    Families deserve clarity, consistency, and professionalism. Our policies and procedures are designed to support a safe, accountable program.
+  </p>
 
-<ul>
-<li>Emergency preparedness & monthly fire drills</li>
-<li>Strict illness & exclusion policy</li>
-<li>Safe Sleep compliance (OAR standards)</li>
-<li>Mandatory reporting requirements</li>
-<li>Clear tuition & enrollment policies</li>
-</ul>
+  <ul>
+    <li>Emergency preparedness and safety planning</li>
+    <li>Clear illness and exclusion standards</li>
+    <li>Safe sleep practices and supervision procedures</li>
+    <li>Mandatory reporting requirements</li>
+    <li>Clear tuition and enrollment expectations</li>
+  </ul>
 
-<p>Full policies are provided upon enrollment.</p>
+  <p class="small">
+    Full policy details are provided as enrollment steps become available.
+  </p>
 </section>
 
+<!-- WAITLIST (Formspree) -->
 <section id="waitlist" class="section">
-<h2>Join the Founding Family Waitlist</h2>
+  <h2>Join the Interest List</h2>
 
-<form action="https://formspree.io/f/xaqdlyqg" method="POST">
-<input type="text" name="Parent Name" placeholder="Parent Name" required>
-<input type="email" name="Email" placeholder="Email Address" required>
-<input type="text" name="Child Age" placeholder="Child's Age">
-<input type="text" name="Start Month" placeholder="Desired Start Month">
-<textarea name="Message" placeholder="Anything you'd like us to know?"></textarea>
-<button class="button" type="submit">Submit Request</button>
-</form>
+  <p class="lead" style="margin-top:0">
+    Submit your information below to receive opening updates and next-step enrollment details as they become available.
+  </p>
+
+  <form class="form" action="https://formspree.io/f/xaqdlyqg" method="POST">
+    <!-- Helps your email notifications be clearly labeled -->
+    <input type="hidden" name="_subject" value="New Interest List Request — Keizer Rugrats Playschool" />
+
+    <div class="form-grid">
+      <div>
+        <label for="parent_name">Parent/Guardian Name</label>
+        <input id="parent_name" name="parent_name" type="text" required />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <!-- ✅ IMPORTANT: must be name="email" (lowercase) -->
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div>
+        <label for="child_age">Child’s Age</label>
+        <input id="child_age" name="child_age" type="text" />
+      </div>
+
+      <div>
+        <label for="start_month">Desired Start Month</label>
+        <input id="start_month" name="start_month" type="text" />
+      </div>
+    </div>
+
+    <div style="margin-top:14px">
+      <label for="message">Anything you’d like us to know?</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+
+    <button class="button" type="submit">Submit Request</button>
+
+    <p class="small">
+      You will receive a standard confirmation screen after submitting. (Automatic confirmation emails can be added later if needed.)
+    </p>
+  </form>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
-<h2>Contact</h2>
-
-<p><strong>Call / Text:</strong> 503-989-9588</p>
-<p><strong>Email:</strong> info@keizerrugrats.com</p>
-<p>Keizer, Oregon</p>
+  <h2>Contact</h2>
+  <p><strong>Call / Text:</strong> 503-989-9588</p>
+  <p><strong>Email:</strong> info@keizerrugrats.com</p>
+  <p class="small">Keizer, Oregon</p>
 </section>
 
 <footer>
-© 2026 Keizer Rugrats Playschool · Keizer, Oregon
+  © <span id="year"></span> Keizer Rugrats Playschool · Keizer, Oregon
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
