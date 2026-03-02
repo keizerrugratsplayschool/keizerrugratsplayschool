@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Keizer Rugrats Playschool | Private Preschool in Keizer, Oregon</title>
-<meta name="description" content="Keizer Rugrats Playschool is a structured, play-based private preschool in Keizer, Oregon serving children ages 2–5. Opening May 2026 (anticipated)." />
+<title>Keizer Rugrats Playschool | Certified Family Child Care in Keizer, Oregon</title>
+<meta name="description" content="Keizer Rugrats Playschool is a structured, play-based Certified Family Child Care home in Keizer, Oregon serving children ages 12 months–6 years. Opening May 2026 (anticipated)." />
 <link rel="canonical" href="https://keizerrugrats.com/" />
 
 <!-- Social preview -->
-<meta property="og:title" content="Keizer Rugrats Playschool | Private Preschool in Keizer" />
-<meta property="og:description" content="Structured, play-based private preschool for ages 2–5 in Keizer, Oregon. Opening May 2026 (anticipated)." />
+<meta property="og:title" content="Keizer Rugrats Playschool | Playschool in Keizer, Oregon" />
+<meta property="og:description" content="Structured, play-based Certified Family Child Care serving ages 12 months–6 years in Keizer, Oregon. Opening May 2026 (anticipated)." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://keizerrugrats.com/" />
 <meta property="og:image" content="https://keizerrugrats.com/new-logo.png" />
@@ -74,6 +74,11 @@ header .logo{
 .nav-bubbles a:hover{
   background:var(--white);
   transform:translateY(-2px);
+}
+
+/* Social bubbles match the nav style but are slightly differentiated */
+.nav-bubbles a.social{
+  background:rgba(243,239,230,.92);
 }
 
 .section{
@@ -213,7 +218,7 @@ footer{
   },
   "telephone":"+1-503-989-9588",
   "email":"info@keizerrugrats.com",
-  "description":"Structured, play-based private preschool for ages 2–5 in Keizer, Oregon. Opening May 2026 (anticipated)."
+  "description":"Structured, play-based Certified Family Child Care home serving children ages 12 months–6 years in Keizer, Oregon. Opening May 2026 (anticipated)."
 }
 </script>
 </head>
@@ -221,24 +226,33 @@ footer{
 <body>
 
 <header>
-<img src="keizer-rugrats-logo.png" alt="Keizer Rugrats Playschool Logo" class="logo" /> 
-  <div class="nav-bubbles">
+  <img src="keizer-rugrats-logo.png" alt="Keizer Rugrats Playschool Logo" class="logo" />
+
+  <div class="nav-bubbles" aria-label="Site navigation">
     <a href="#program">Programs</a>
     <a href="#rhythm">Daily Rhythm</a>
     <a href="#standards">Care Standards</a>
     <a href="#waitlist">Waitlist</a>
     <a href="#contact">Contact</a>
+    <a class="social" href="https://www.facebook.com/KeizerRugratsPlaySchool" target="_blank" rel="noopener">Facebook</a>
+    <a class="social" href="https://www.instagram.com/keizerrugratsplayschool/" target="_blank" rel="noopener">Instagram</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="section">
-  <h1>Private Preschool — Built With Intention.</h1>
+  <h1>A Playschool — Built With Intention.</h1>
 
   <p class="lead">
-    Keizer Rugrats Playschool is a structured, play-based private preschool in Keizer, Oregon serving children ages 2–5.
-    We provide a calm, consistent, small-group learning environment designed to build independence, emotional confidence,
+    Keizer Rugrats Playschool is a structured, play-based Certified Family Child Care home in Keizer, Oregon
+    serving children ages <strong>12 months–6 years</strong>.
+    We provide a calm, consistent, small-group environment designed to build independence, emotional confidence,
     and strong foundational skills.
+  </p>
+
+  <p class="small">
+    <strong>Why “Playschool”?</strong> We use the word intentionally. It reflects our belief that children learn best through
+    purposeful play, steady routines, and warm guidance — without rushing childhood.
   </p>
 
   <div class="notice">
@@ -281,7 +295,7 @@ footer{
 <section id="rhythm" class="section">
   <h2>Daily Rhythm</h2>
 
-  <p class="lead" style="margin-top:0">Our structured preschool day includes:</p>
+  <p class="lead" style="margin-top:0">Our structured day includes:</p>
 
   <ul>
     <li>Arrival & Free Exploration</li>
@@ -289,13 +303,13 @@ footer{
     <li>Creative Centers & Small Groups</li>
     <li>Outdoor Gross Motor Play</li>
     <li>Lunch & Story Wind-Down</li>
-    <li>Rest & Recharge</li>
+    <li>Rest & Quiet Time</li>
     <li>Afternoon Centers & Activities</li>
     <li>Closing Routine & Family Pick-Up</li>
   </ul>
 
   <p class="small">
-    Each block is designed intentionally to support cognitive, emotional, and physical development.
+    Each block is designed intentionally to support cognitive, emotional, and physical development across ages 12 months–6 years.
   </p>
 </section>
 
@@ -310,13 +324,13 @@ footer{
   <ul>
     <li>Emergency preparedness and safety planning</li>
     <li>Clear illness and exclusion standards</li>
-    <li>Safe sleep practices and supervision procedures</li>
+    <li>Age-appropriate supervision and safety procedures</li>
     <li>Mandatory reporting requirements</li>
     <li>Clear tuition and enrollment expectations</li>
   </ul>
 
   <p class="small">
-    Full policy details are provided as enrollment steps become available.
+    Full policy details are provided during enrollment.
   </p>
 </section>
 
@@ -329,7 +343,6 @@ footer{
   </p>
 
   <form class="form" action="https://formspree.io/f/xaqdlyqg" method="POST">
-    <!-- Helps your email notifications be clearly labeled -->
     <input type="hidden" name="_subject" value="New Interest List Request — Keizer Rugrats Playschool" />
 
     <div class="form-grid">
@@ -340,18 +353,17 @@ footer{
 
       <div>
         <label for="email">Email</label>
-        <!-- ✅ IMPORTANT: must be name="email" (lowercase) -->
         <input id="email" name="email" type="email" required />
       </div>
 
       <div>
         <label for="child_age">Child’s Age</label>
-        <input id="child_age" name="child_age" type="text" />
+        <input id="child_age" name="child_age" type="text" placeholder="Example: 18 months / 3 years" />
       </div>
 
       <div>
         <label for="start_month">Desired Start Month</label>
-        <input id="start_month" name="start_month" type="text" />
+        <input id="start_month" name="start_month" type="text" placeholder="Example: June 2026" />
       </div>
     </div>
 
