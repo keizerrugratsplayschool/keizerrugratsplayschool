@@ -42,17 +42,12 @@ body{
 
 /* Prevent anchor jumps hiding behind sticky header */
 section{scroll-margin-top:140px}
-<a href="#contact">Contact</a>
-  h1,h2{
+
+h1,h2{
   font-family:"Playfair Display", serif;
   letter-spacing:-.4px;
 }
-  .section{
-  backdrop-filter: blur(2px);
-}
-h1{
-  letter-spacing:-.2px;
-}
+h1{ letter-spacing:-.2px; }
 p{margin:12px 0}
 strong{font-weight:800}
 
@@ -66,11 +61,13 @@ strong{font-weight:800}
   background:var(--navy);
   box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
+
 /* Shrink header after scroll */
 .header-wrap.is-mini .topbar{ display:none; }
 .header-wrap.is-mini .logo{ width:130px; margin-bottom:6px; }
 .header-wrap.is-mini header{ padding:8px 10px; }
-.header-wrap.is-mini section{ scroll-margin-top:110px; }.topbar{
+
+.topbar{
   font-size:12px;
   color:rgba(255,255,255,.92);
   padding:6px 12px;
@@ -104,6 +101,7 @@ header{
   margin:0 auto;
   max-width:920px;
   scrollbar-width:none;
+  mask-image: linear-gradient(to right, transparent 0, black 18px, black calc(100% - 18px), transparent 100%);
 }
 .nav::-webkit-scrollbar{ display:none; }
 
@@ -122,21 +120,14 @@ header{
   white-space:nowrap;
   transition:transform .15s ease, background .15s ease;
 }
-
 .nav a:hover{
   background:var(--white);
   transform:translateY(-2px);
 }
-
 .nav .social{
   width:40px;
   height:40px;
   padding:0;
-}
-
-/* Optional: subtle scroll hint */
-.nav{
-  mask-image: linear-gradient(to right, transparent 0, black 18px, black calc(100% - 18px), transparent 100%);
 }
 
 /* =========================
@@ -149,17 +140,11 @@ header{
   background:var(--cream);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
+  backdrop-filter: blur(2px);
 }
 
-.lead{
-  font-size:18px;
-  color:var(--muted);
-}
-
-.micro{
-  font-size:13px;
-  color:var(--muted);
-}
+.lead{ font-size:18px; color:var(--muted); }
+.micro{ font-size:13px; color:var(--muted); }
 
 .callout{
   background:rgba(36,56,91,.08);
@@ -183,13 +168,11 @@ header{
   border:none;
   cursor:pointer;
 }
-
 .button.secondary{
   background:transparent;
   color:var(--navy);
   border:2px solid rgba(36,56,91,.25);
 }
-
 .button.secondary:hover{
   border-color:rgba(36,56,91,.45);
 }
@@ -200,18 +183,13 @@ header{
   gap:18px;
   margin-top:22px;
 }
-
 .pillar{
   background:var(--white);
   padding:22px;
   border-radius:18px;
   box-shadow:0 10px 24px rgba(0,0,0,.05);
 }
-
-.pillar h3{
-  margin:0 0 8px;
-  font-size:15px;
-}
+.pillar h3{ margin:0 0 8px; font-size:15px; }
 
 hr.divider{
   border:0;
@@ -220,11 +198,8 @@ hr.divider{
   margin:28px 0 0;
 }
 
-ul{
-  margin:10px 0 0 18px;
-  color:var(--muted);
-}
-li{margin:8px 0}
+ul{ margin:10px 0 0 18px; color:var(--muted); }
+li{ margin:8px 0; }
 
 /* Founder */
 .founder-wrap{
@@ -233,7 +208,6 @@ li{margin:8px 0}
   gap:34px;
   align-items:center;
 }
-
 .founder-photo{
   width:100%;
   max-width:320px;
@@ -248,7 +222,6 @@ li{margin:8px 0}
   gap:14px;
   margin-top:14px;
 }
-
 label{
   display:block;
   font-weight:800;
@@ -256,7 +229,6 @@ label{
   font-size:13px;
   margin:0 0 6px;
 }
-
 input, textarea{
   width:100%;
   padding:12px 12px;
@@ -265,8 +237,7 @@ input, textarea{
   background:var(--white);
   font-size:14px;
 }
-
-textarea{min-height:120px; resize:vertical}
+textarea{ min-height:120px; resize:vertical; }
 
 /* FAQ */
 details{
@@ -275,7 +246,7 @@ details{
   padding:14px 16px;
   box-shadow:0 10px 24px rgba(0,0,0,.05);
 }
-details + details{margin-top:12px}
+details + details{ margin-top:12px; }
 summary{
   cursor:pointer;
   font-weight:850;
@@ -358,6 +329,7 @@ footer{
       <a href="#founder">Founder</a>
       <a href="#faq">FAQ</a>
       <a href="#enrollment">Interest List</a>
+      <a href="#contact">Contact</a>
 
       <!-- Social Icons -->
       <a class="social" href="https://www.facebook.com/KeizerRugratsPlaySchool" target="_blank" rel="noopener" aria-label="Facebook">
@@ -389,11 +361,11 @@ footer{
   <div class="callout">
     Built with intention from the beginning: a defined daily rhythm, clear expectations, and purposeful learning — not improvised care.
   </div>
-  
-<p class="micro" style="margin-top:14px;">
-Enrollment remains intentionally limited to preserve quality and consistency.
-</p>
-  
+
+  <p class="micro" style="margin-top:14px;">
+    Enrollment remains intentionally limited to preserve quality and consistency.
+  </p>
+
   <a href="#enrollment" class="button">Join the Interest List</a>
   <a href="#difference" class="button secondary" style="margin-left:10px;">See What’s Different</a>
 
@@ -493,27 +465,14 @@ Enrollment remains intentionally limited to preserve quality and consistency.
       <p class="micro">Enrollment remains intentionally limited so quality is never diluted.</p>
     </div>
   </div>
-<p style="margin-top:20px;">
-There is no background television, no chaotic transitions, and no improvising the day.
-The environment is steady, purposeful, and built for growth.
-</p>
+
+  <p style="margin-top:20px;">
+    There is no background television, no chaotic transitions, and no improvising the day.
+    The environment is steady, purposeful, and built for growth.
+  </p>
+
   <div class="callout" style="margin-top:18px;">
     Families choose Keizer Rugrats Playschool because they want their child’s early years handled with intention.
-  </div>
-</section>
-
-<!-- FAMILIES -->
-<section id="families" class="section reveal">
-  <h2>For Families Who Value Intention</h2>
-  <ul>
-    <li>Want more than supervision — they want growth.</li>
-    <li>Prefer calm structure over chaos.</li>
-    <li>Value readiness without pressure.</li>
-    <li>Appreciate clear expectations and steady routines.</li>
-  </ul>
-
-  <div class="callout" style="margin-top:18px;">
-    This playschool was designed to remain small, steady, and deeply intentional. Enrollment is offered thoughtfully to preserve the quality of experience.
   </div>
 </section>
 
@@ -583,8 +542,8 @@ The environment is steady, purposeful, and built for growth.
     </p>
   </details>
 </section>
-<a href="#contact">Contact</a>
-  <!-- INTEREST LIST (FORMSPREE) -->
+
+<!-- INTEREST LIST (FORMSPREE) -->
 <section id="enrollment" class="section reveal">
   <h2>Interest List</h2>
 
@@ -656,18 +615,19 @@ The environment is steady, purposeful, and built for growth.
   <p><strong>Email:</strong> info@KeizerRugrats.com</p>
   <p class="micro">Keizer, Oregon</p>
 </section>
+
 <section class="section reveal" style="text-align:center;">
   <h2>Prepared with Care. Built with Intention.</h2>
   <p class="lead">
     Families who value structure, growth, and calm leadership tend to feel at home here.
   </p>
 </section>
+
 <footer>
   © <span id="year"></span> Keizer Rugrats Playschool · Keizer, Oregon
 </footer>
 
 <script>
-  <script>
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -680,23 +640,11 @@ The environment is steady, purposeful, and built for growth.
   }, { threshold: 0.12 });
   els.forEach(el => obs.observe(el));
 
-  // ✅ Make header shrink after scroll
+  // Make header shrink after scroll
   const headerWrap = document.querySelector('.header-wrap');
   window.addEventListener('scroll', () => {
     headerWrap.classList.toggle('is-mini', window.scrollY > 50);
   });
-</script>
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Subtle reveal on scroll
-  const els = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('is-visible');
-    });
-  }, { threshold: 0.12 });
-  els.forEach(el => obs.observe(el));
 </script>
 
 </body>
