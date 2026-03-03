@@ -6,6 +6,7 @@
 
 <title>Keizer Rugrats Playschool | Certified Family Child Care in Keizer, Oregon</title>
 <meta name="description" content="An intentionally designed, curriculum-guided playschool serving children ages 12 months–6 years in Keizer, Oregon. Enrollment opens thoughtfully." />
+<link rel="canonical" href="https://keizerrugrats.com/" />
 
 <!-- Social preview -->
 <meta property="og:title" content="Keizer Rugrats Playschool | Playschool in Keizer, Oregon" />
@@ -39,7 +40,7 @@ body{
   line-height:1.75;
 }
 
-/* Prevent anchor jump under sticky header */
+/* Prevent anchor jumps hiding behind sticky header */
 section{scroll-margin-top:140px}
 
 h1,h2{
@@ -50,6 +51,9 @@ h1,h2{
 p{margin:12px 0}
 strong{font-weight:800}
 
+/* =========================
+   COMPACT STICKY HEADER
+========================= */
 .header-wrap{
   position:sticky;
   top:0;
@@ -59,50 +63,55 @@ strong{font-weight:800}
 }
 
 .topbar{
-  font-size:13px;
+  font-size:12px;
   color:rgba(255,255,255,.92);
-  padding:10px 16px;
+  padding:6px 12px;
   text-align:center;
   border-bottom:1px solid rgba(255,255,255,.14);
 }
-
-.topbar span{
-  display:inline-block;
-  padding:0 8px;
-  opacity:.95;
-}
+.topbar span{ padding:0 6px; opacity:.95; }
 
 header{
-  padding:18px 18px 16px;
+  padding:10px 12px 10px;
   text-align:center;
 }
 
 .logo{
-  width:230px;
-  max-width:80vw;
+  width:190px;
+  max-width:68vw;
   height:auto;
   display:block;
-  margin:0 auto 12px;
+  margin:0 auto 8px;
 }
 
+/* Single-row scrollable nav */
 .nav{
   display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
+  justify-content:flex-start;
   gap:10px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:6px 6px 2px;
+  margin:0 auto;
+  max-width:920px;
+  scrollbar-width:none;
 }
+.nav::-webkit-scrollbar{ display:none; }
 
 .nav a{
+  flex:0 0 auto;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   background:var(--cream);
   color:var(--navy);
-  padding:11px 18px;
+  padding:10px 14px;
   border-radius:999px;
   text-decoration:none;
   font-weight:750;
-  font-size:13.5px;
+  font-size:13px;
+  white-space:nowrap;
   transition:transform .15s ease, background .15s ease;
 }
 
@@ -112,11 +121,19 @@ header{
 }
 
 .nav .social{
-  width:42px;
-  height:42px;
+  width:40px;
+  height:40px;
   padding:0;
 }
 
+/* Optional: subtle scroll hint */
+.nav{
+  mask-image: linear-gradient(to right, transparent 0, black 18px, black calc(100% - 18px), transparent 100%);
+}
+
+/* =========================
+   SECTIONS / CARDS
+========================= */
 .section{
   max-width:860px;
   margin:56px auto;
@@ -124,11 +141,6 @@ header{
   background:var(--cream);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-}
-
-@media (max-width: 860px){
-  .section{padding:26px; margin:42px 14px}
-  section{scroll-margin-top:170px}
 }
 
 .lead{
@@ -200,6 +212,13 @@ hr.divider{
   margin:28px 0 0;
 }
 
+ul{
+  margin:10px 0 0 18px;
+  color:var(--muted);
+}
+li{margin:8px 0}
+
+/* Founder */
 .founder-wrap{
   display:flex;
   flex-wrap:wrap;
@@ -214,20 +233,12 @@ hr.divider{
   box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
-ul{
-  margin:10px 0 0 18px;
-  color:var(--muted);
-}
-li{margin:8px 0}
-
+/* Form */
 .form-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:14px;
   margin-top:14px;
-}
-@media (max-width: 860px){
-  .form-grid{grid-template-columns:1fr}
 }
 
 label{
@@ -249,7 +260,7 @@ input, textarea{
 
 textarea{min-height:120px; resize:vertical}
 
-/* FAQ (accordion) */
+/* FAQ */
 details{
   background:var(--white);
   border-radius:16px;
@@ -264,10 +275,7 @@ summary{
   list-style:none;
 }
 summary::-webkit-details-marker{display:none}
-details p{
-  margin:10px 0 0;
-  color:var(--muted);
-}
+details p{ margin:10px 0 0; color:var(--muted); }
 
 /* Subtle reveal */
 .reveal{
@@ -286,9 +294,22 @@ footer{
   color:var(--muted);
   font-size:14px;
 }
+
+/* Responsive */
+@media (max-width: 860px){
+  .section{padding:26px; margin:42px 14px}
+  .form-grid{grid-template-columns:1fr}
+  section{scroll-margin-top:160px}
+}
+@media (max-width: 520px){
+  .topbar{display:none;}
+  .logo{width:170px; max-width:62vw;}
+  header{padding:10px 10px 8px;}
+  section{scroll-margin-top:110px}
+}
 </style>
 
-<!-- Basic LocalBusiness schema -->
+<!-- Basic schema -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -339,7 +360,7 @@ footer{
 
       <a class="social" href="https://www.instagram.com/keizerrugratsplayschool/" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-          <path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 1 0 12 7.2Zm0 7.8A3 3 0 1 1 12 9a3 3 0 0 1 0 6Zm6-8.1a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0ZM12 2.25c2.7 0 3.03.01 4.09.06 2.65.12 3.88 1.35 4 4 .05 1.06.06 1.39.06 4.09s-.01 3.03-.06 4.09c-.12 2.65-1.35 3.88-4 4-1.06.05-1.39.06-4.09.06s-3.03-.01-4.09-.06c-2.65-.12-3.88-1.35-4-4-.05-1.06-.06-1.39-.06-4.09s.01-3.03.06-4.09c.12-2.65 1.35-3.88 4-4 1.06-.05 1.39-.06 4.09-.06Zm0-2.25C9.24 0 8.88.01 7.8.06 4.64.21 2.21 2.64 2.06 5.8.01 6.88 0 7.24 0 12s.01 5.12.06 6.2c.15 3.16 2.58 5.59 5.74 5.74 1.08.05 1.44.06 6.2.06s5.12-.01 6.2-.06c3.16-.15 5.59-2.58 5.74-5.74.05-1.08.06-1.44.06-6.2s-.01-5.12-.06-6.2C23.79 2.64 21.36.21 18.2.06 17.12.01 16.76 0 12 0Z"/>
+          <path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2Zm0 7.8A3 3 0 1 1 12 9a3 3 0 0 1 0 6Zm6-8.1a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0ZM12 2.25c2.7 0 3.03.01 4.09.06 2.65.12 3.88 1.35 4 4 .05 1.06.06 1.39.06 4.09s-.01 3.03-.06 4.09c-.12 2.65-1.35 3.88-4 4-1.06.05-1.39.06-4.09.06s-3.03-.01-4.09-.06c-2.65-.12-3.88-1.35-4-4-.05-1.06-.06-1.39-.06-4.09s.01-3.03.06-4.09c.12-2.65 1.35-3.88 4-4 1.06-.05 1.39-.06 4.09-.06Zm0-2.25C9.24 0 8.88.01 7.8.06 4.64.21 2.21 2.64 2.06 5.8.01 6.88 0 7.24 0 12s.01 5.12.06 6.2c.15 3.16 2.58 5.59 5.74 5.74 1.08.05 1.44.06 6.2.06s5.12-.01 6.2-.06c3.16-.15 5.59-2.58 5.74-5.74.05-1.08.06-1.44.06-6.2s-.01-5.12-.06-6.2C23.79 2.64 21.36.21 18.2.06 17.12.01 16.76 0 12 0Z"/>
         </svg>
       </a>
     </nav>
@@ -351,7 +372,8 @@ footer{
   <h1>Where Childhood Is Protected — and Prepared.</h1>
 
   <p class="lead">
-    Keizer Rugrats Playschool is a curriculum-guided, intentionally structured playschool serving children ages <strong>12 months–6 years</strong> in Keizer, Oregon.
+    Keizer Rugrats Playschool is a curriculum-guided, intentionally structured playschool serving children ages
+    <strong>12 months–6 years</strong> in Keizer, Oregon.
   </p>
 
   <p><strong>Childhood is short. The foundation is not.</strong></p>
@@ -365,7 +387,8 @@ footer{
 
   <hr class="divider">
   <p class="micro" style="margin-top:18px;">
-    <strong>Why “Playschool”?</strong> Because children learn best through purposeful play, steady routines, warm guidance, and meaningful engagement — without rushing childhood.
+    <strong>Why “Playschool”?</strong> Because children learn best through purposeful play, steady routines, warm guidance, and meaningful engagement —
+    without rushing childhood.
   </p>
 </section>
 
@@ -377,7 +400,8 @@ footer{
     Childhood is not a waiting room for the future. It is the foundation of it.
   </p>
   <p>
-    Keizer Rugrats Playschool was designed intentionally before enrollment opened — with a fully developed curriculum framework and a calm, structured approach that helps children feel secure, capable, and supported.
+    Keizer Rugrats Playschool was designed intentionally before enrollment opened — with a fully developed curriculum framework and a calm,
+    structured approach that helps children feel secure, capable, and supported.
   </p>
 </section>
 
@@ -413,13 +437,14 @@ footer{
   </div>
 
   <p style="margin-top:22px;">
-    <strong>Intentional media use:</strong> Screens are used rarely and only for purposeful instruction (such as safety education or guided movement). Screens are never used as background entertainment or supervision.
+    <strong>Intentional media use:</strong> Screens are used rarely and only for purposeful instruction (such as safety education or guided movement).
+    Screens are never used as background entertainment or supervision.
   </p>
 
   <a href="#enrollment" class="button">Receive Opening Updates</a>
 </section>
 
-<!-- A DAY FEELS LIKE -->
+<!-- A DAY HERE -->
 <section id="day" class="section reveal">
   <h2>What a Day Feels Like</h2>
   <p class="lead" style="margin-top:0;">
@@ -457,12 +482,12 @@ footer{
     </div>
   </div>
 
-  <p style="margin-top:22px; font-weight:650; color:var(--muted);">
+  <div class="callout" style="margin-top:18px;">
     Families choose Keizer Rugrats Playschool because they want their child’s early years handled with intention.
-  </p>
+  </div>
 </section>
 
-<!-- FOR FAMILIES WHO -->
+<!-- FAMILIES -->
 <section id="families" class="section reveal">
   <h2>For Families Who Value Intention</h2>
   <ul>
@@ -473,7 +498,7 @@ footer{
   </ul>
 
   <div class="callout" style="margin-top:18px;">
-    This playschool was designed to remain small, steady, and deeply intentional. Enrollment is offered thoughtfully to preserve the quality of experience for every child.
+    This playschool was designed to remain small, steady, and deeply intentional. Enrollment is offered thoughtfully to preserve the quality of experience.
   </div>
 </section>
 
@@ -481,7 +506,7 @@ footer{
 <section id="founder" class="section reveal">
   <div class="founder-wrap">
     <div>
-      <!-- Put your headshot file in the same folder as this HTML, named exactly: founder-photo.jpg -->
+      <!-- Put your headshot in the same folder as this HTML, named exactly: founder-photo.jpg -->
       <img src="founder-photo.jpg" class="founder-photo" alt="Margarita Alkhfajy, Founder of Keizer Rugrats Playschool">
     </div>
 
@@ -544,7 +569,7 @@ footer{
   </details>
 </section>
 
-<!-- ENROLLMENT / FORMSPREE -->
+<!-- INTEREST LIST (FORMSPREE) -->
 <section id="enrollment" class="section reveal">
   <h2>Interest List</h2>
 
@@ -607,6 +632,14 @@ footer{
       This playschool remains intentionally small so that the quality of experience is never diluted.
     </p>
   </form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
+  <p><strong>Call / Text:</strong> 503-989-9588</p>
+  <p><strong>Email:</strong> info@KeizerRugrats.com</p>
+  <p class="micro">Keizer, Oregon</p>
 </section>
 
 <footer>
