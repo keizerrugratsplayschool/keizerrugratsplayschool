@@ -40,16 +40,17 @@ body{
   line-height:1.75;
 }
 
-/* Prevent anchor jumps hiding behind sticky header */
-section{scroll-margin-top:140px}
-
 h1,h2{
   font-family:"Playfair Display", serif;
   letter-spacing:-.4px;
 }
-h1{letter-spacing:-.2px}
+h1{ letter-spacing:-.2px; }
+
 p{margin:12px 0}
 strong{font-weight:800}
+
+/* Prevent anchor jumps hiding behind sticky header */
+section{scroll-margin-top:140px}
 
 /* =========================
    COMPACT STICKY HEADER
@@ -69,10 +70,9 @@ strong{font-weight:800}
   text-align:center;
   border-bottom:1px solid rgba(255,255,255,.14);
 }
-.topbar span{ padding:0 6px; opacity:.95; }
 
 header{
-  padding:10px 12px 10px;
+  padding:12px 12px 12px;
   text-align:center;
 }
 
@@ -81,27 +81,20 @@ header{
   max-width:68vw;
   height:auto;
   display:block;
-  margin:0 auto 8px;
+  margin:0 auto 10px;
 }
 
-/* Single-row scrollable nav */
+/* Simple centered nav (no overflow/mask now) */
 .nav{
   display:flex;
-  justify-content:flex-start;
+  justify-content:center;
+  flex-wrap:wrap;
   gap:10px;
-  flex-wrap:nowrap;
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  padding:6px 6px 2px;
   margin:0 auto;
   max-width:920px;
-  scrollbar-width:none;
-  mask-image: linear-gradient(to right, transparent 0, black 18px, black calc(100% - 18px), transparent 100%);
 }
-.nav::-webkit-scrollbar{ display:none; }
 
 .nav a{
-  flex:0 0 auto;
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -121,16 +114,21 @@ header{
   transform:translateY(-2px);
 }
 
-.nav .social{
+.nav a.social{
   width:40px;
   height:40px;
   padding:0;
 }
 
+.nav a.social svg{
+  display:block;
+}
+
 /* Shrink header after scroll */
 .header-wrap.is-mini .topbar{ display:none; }
-.header-wrap.is-mini .logo{ width:130px; margin-bottom:6px; }
-.header-wrap.is-mini header{ padding:8px 10px; }
+.header-wrap.is-mini .logo{ width:140px; margin-bottom:8px; }
+.header-wrap.is-mini header{ padding:10px 10px; }
+.header-wrap.is-mini + * section{ scroll-margin-top:110px; }
 
 /* =========================
    SECTIONS / CARDS
@@ -145,8 +143,15 @@ header{
   backdrop-filter: blur(2px);
 }
 
-.lead{font-size:18px; color:var(--muted);}
-.micro{font-size:13px; color:var(--muted);}
+.lead{
+  font-size:18px;
+  color:var(--muted);
+}
+
+.micro{
+  font-size:13px;
+  color:var(--muted);
+}
 
 .callout{
   background:rgba(36,56,91,.08);
@@ -195,7 +200,10 @@ header{
   box-shadow:0 10px 24px rgba(0,0,0,.05);
 }
 
-.pillar h3{margin:0 0 8px; font-size:15px;}
+.pillar h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
 
 hr.divider{
   border:0;
@@ -204,7 +212,10 @@ hr.divider{
   margin:28px 0 0;
 }
 
-ul{margin:10px 0 0 18px; color:var(--muted);}
+ul{
+  margin:10px 0 0 18px;
+  color:var(--muted);
+}
 li{margin:8px 0}
 
 /* Founder */
@@ -293,7 +304,7 @@ footer{
 @media (max-width: 520px){
   .topbar{display:none;}
   .logo{width:170px; max-width:62vw;}
-  header{padding:10px 10px 8px;}
+  header{padding:10px 10px 10px;}
   section{scroll-margin-top:110px}
 }
 </style>
@@ -323,15 +334,12 @@ footer{
 
 <div class="header-wrap">
   <div class="topbar" role="note" aria-label="Program summary">
-    <span>Certified Family Child Care</span> ·
-    <span>Ages 12 months–6 years</span> ·
-    <span>Keizer, Oregon</span>
+    Certified Family Child Care · Ages 12 months–6 years · Keizer, Oregon
   </div>
 
   <header>
     <img src="keizer-rugrats-logo.png" class="logo" alt="Keizer Rugrats Playschool Logo">
 
-    <!-- SIMPLIFIED NAV -->
     <nav class="nav" aria-label="Site navigation">
       <a href="#faq">FAQ</a>
       <a href="#enrollment">Interest List</a>
@@ -373,8 +381,10 @@ footer{
   </p>
 
   <a href="#enrollment" class="button">Join the Interest List</a>
+  <a href="#faq" class="button secondary" style="margin-left:10px;">Read FAQ</a>
 
   <hr class="divider">
+
   <p class="micro" style="margin-top:18px;">
     <strong>Why “Playschool”?</strong> Because children learn best through purposeful play, steady routines, warm guidance, and meaningful engagement —
     without rushing childhood.
@@ -431,56 +441,26 @@ footer{
   </p>
 </section>
 
-<!-- DIFFERENCE -->
-<section id="difference" class="section reveal">
-  <h2>Designed Differently</h2>
-
-  <div class="pillars">
-    <div class="pillar">
-      <h3>Fully Built Curriculum</h3>
-      <p class="micro">Not last-minute activity planning. The day is guided with purpose.</p>
-    </div>
-    <div class="pillar">
-      <h3>Structured Daily Rhythm</h3>
-      <p class="micro">Children feel secure when routines are steady and predictable.</p>
-    </div>
-    <div class="pillar">
-      <h3>Calm, Consistent Leadership</h3>
-      <p class="micro">Guidance is steady — boundaries are clear, respectful, and developmentally appropriate.</p>
-    </div>
-    <div class="pillar">
-      <h3>Intentionally Small</h3>
-      <p class="micro">Enrollment remains intentionally limited so quality is never diluted.</p>
-    </div>
-  </div>
-
-  <p style="margin-top:20px;">
-    There is no background television, no chaotic transitions, and no improvising the day.
-    The environment is steady, purposeful, and built for growth.
-  </p>
-
-  <div class="callout" style="margin-top:18px;">
-    Families choose Keizer Rugrats Playschool because they want their child’s early years handled with intention.
-  </div>
-</section>
-
 <!-- FOUNDER -->
 <section id="founder" class="section reveal">
   <div class="founder-wrap">
     <div>
+      <!-- Put your headshot in the same folder as this HTML, named exactly: founder-photo.jpg -->
       <img src="founder-photo.jpg" class="founder-photo" alt="Margarita Alkhfajy, Founder of Keizer Rugrats Playschool">
     </div>
 
     <div style="flex:1; min-width:260px;">
       <h2>Founder’s Note</h2>
       <p class="lead" style="margin-top:0;">
-        I built this playschool for families who want their child’s early years handled with intention.
+        Hi, I’m <strong>Margarita Alkhfajy</strong> — Founder, Director, and Lead Teacher of Keizer Rugrats Playschool.
       </p>
       <p>
-        Leadership sets the tone of a learning environment. At Keizer Rugrats Playschool, that tone is calm, steady, and structured.
+        I built this playschool for families who want their child’s early years handled with intention —
+        with calm leadership, clear expectations, and a real curriculum guiding the day.
       </p>
       <p>
-        This program was built thoughtfully — with curriculum depth, predictable rhythm, and respectful guidance at its core.
+        This is not a “drop-off and hope for the best” environment. It’s a steady, prepared, purposeful playschool —
+        where children are seen, guided, and supported.
       </p>
     </div>
   </div>
@@ -538,14 +518,11 @@ footer{
     Join the interest list to receive opening updates and next-step enrollment details as they become available.
   </p>
 
-  <div class="pillars">
-    <div class="pillar"><strong>1.</strong> Join the interest list.</div>
-    <div class="pillar"><strong>2.</strong> Review philosophy and handbook.</div>
-    <div class="pillar"><strong>3.</strong> Schedule a family conversation.</div>
-    <div class="pillar"><strong>4.</strong> Confirm enrollment if aligned.</div>
+  <div class="callout">
+    This playschool remains intentionally small so the quality of experience is never diluted.
   </div>
 
-  <form action="https://formspree.io/f/xaqdlyqg" method="POST" style="margin-top:28px;">
+  <form action="https://formspree.io/f/xaqdlyqg" method="POST" style="margin-top:18px;">
     <input type="hidden" name="_subject" value="New Interest Request — Keizer Rugrats Playschool" />
 
     <div class="form-grid">
@@ -588,10 +565,6 @@ footer{
     </div>
 
     <button class="button" type="submit">Submit Interest</button>
-
-    <p class="micro" style="margin-top:10px;">
-      This playschool remains intentionally small so that the quality of experience is never diluted.
-    </p>
   </form>
 </section>
 
@@ -627,7 +600,7 @@ footer{
   }, { threshold: 0.12 });
   els.forEach(el => obs.observe(el));
 
-  // Make header shrink after scroll
+  // Header shrink after scroll
   const headerWrap = document.querySelector('.header-wrap');
   window.addEventListener('scroll', () => {
     headerWrap.classList.toggle('is-mini', window.scrollY > 50);
