@@ -47,7 +47,7 @@ h1,h2{
   font-family:"Playfair Display", serif;
   letter-spacing:-.4px;
 }
-h1{ letter-spacing:-.2px; }
+h1{letter-spacing:-.2px}
 p{margin:12px 0}
 strong{font-weight:800}
 
@@ -61,11 +61,6 @@ strong{font-weight:800}
   background:var(--navy);
   box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
-
-/* Shrink header after scroll */
-.header-wrap.is-mini .topbar{ display:none; }
-.header-wrap.is-mini .logo{ width:130px; margin-bottom:6px; }
-.header-wrap.is-mini header{ padding:8px 10px; }
 
 .topbar{
   font-size:12px;
@@ -120,15 +115,22 @@ header{
   white-space:nowrap;
   transition:transform .15s ease, background .15s ease;
 }
+
 .nav a:hover{
   background:var(--white);
   transform:translateY(-2px);
 }
+
 .nav .social{
   width:40px;
   height:40px;
   padding:0;
 }
+
+/* Shrink header after scroll */
+.header-wrap.is-mini .topbar{ display:none; }
+.header-wrap.is-mini .logo{ width:130px; margin-bottom:6px; }
+.header-wrap.is-mini header{ padding:8px 10px; }
 
 /* =========================
    SECTIONS / CARDS
@@ -143,8 +145,8 @@ header{
   backdrop-filter: blur(2px);
 }
 
-.lead{ font-size:18px; color:var(--muted); }
-.micro{ font-size:13px; color:var(--muted); }
+.lead{font-size:18px; color:var(--muted);}
+.micro{font-size:13px; color:var(--muted);}
 
 .callout{
   background:rgba(36,56,91,.08);
@@ -168,11 +170,13 @@ header{
   border:none;
   cursor:pointer;
 }
+
 .button.secondary{
   background:transparent;
   color:var(--navy);
   border:2px solid rgba(36,56,91,.25);
 }
+
 .button.secondary:hover{
   border-color:rgba(36,56,91,.45);
 }
@@ -183,13 +187,15 @@ header{
   gap:18px;
   margin-top:22px;
 }
+
 .pillar{
   background:var(--white);
   padding:22px;
   border-radius:18px;
   box-shadow:0 10px 24px rgba(0,0,0,.05);
 }
-.pillar h3{ margin:0 0 8px; font-size:15px; }
+
+.pillar h3{margin:0 0 8px; font-size:15px;}
 
 hr.divider{
   border:0;
@@ -198,8 +204,8 @@ hr.divider{
   margin:28px 0 0;
 }
 
-ul{ margin:10px 0 0 18px; color:var(--muted); }
-li{ margin:8px 0; }
+ul{margin:10px 0 0 18px; color:var(--muted);}
+li{margin:8px 0}
 
 /* Founder */
 .founder-wrap{
@@ -208,6 +214,7 @@ li{ margin:8px 0; }
   gap:34px;
   align-items:center;
 }
+
 .founder-photo{
   width:100%;
   max-width:320px;
@@ -222,6 +229,7 @@ li{ margin:8px 0; }
   gap:14px;
   margin-top:14px;
 }
+
 label{
   display:block;
   font-weight:800;
@@ -229,6 +237,7 @@ label{
   font-size:13px;
   margin:0 0 6px;
 }
+
 input, textarea{
   width:100%;
   padding:12px 12px;
@@ -237,7 +246,8 @@ input, textarea{
   background:var(--white);
   font-size:14px;
 }
-textarea{ min-height:120px; resize:vertical; }
+
+textarea{min-height:120px; resize:vertical}
 
 /* FAQ */
 details{
@@ -246,7 +256,7 @@ details{
   padding:14px 16px;
   box-shadow:0 10px 24px rgba(0,0,0,.05);
 }
-details + details{ margin-top:12px; }
+details + details{margin-top:12px}
 summary{
   cursor:pointer;
   font-weight:850;
@@ -321,12 +331,8 @@ footer{
   <header>
     <img src="keizer-rugrats-logo.png" class="logo" alt="Keizer Rugrats Playschool Logo">
 
+    <!-- SIMPLIFIED NAV -->
     <nav class="nav" aria-label="Site navigation">
-      <a href="#philosophy">Philosophy</a>
-      <a href="#curriculum">Curriculum</a>
-      <a href="#day">A Day Here</a>
-      <a href="#difference">Designed Differently</a>
-      <a href="#founder">Founder</a>
       <a href="#faq">FAQ</a>
       <a href="#enrollment">Interest List</a>
       <a href="#contact">Contact</a>
@@ -367,7 +373,6 @@ footer{
   </p>
 
   <a href="#enrollment" class="button">Join the Interest List</a>
-  <a href="#difference" class="button secondary" style="margin-left:10px;">See What’s Different</a>
 
   <hr class="divider">
   <p class="micro" style="margin-top:18px;">
@@ -424,26 +429,9 @@ footer{
     <strong>Intentional media use:</strong> Screens are used rarely and only for purposeful instruction (such as safety education or guided movement).
     Screens are never used as background entertainment or supervision.
   </p>
-
-  <a href="#enrollment" class="button">Receive Opening Updates</a>
 </section>
 
-<!-- A DAY HERE -->
-<section id="day" class="section reveal">
-  <h2>What a Day Feels Like</h2>
-  <p class="lead" style="margin-top:0;">
-    Calm structure. Active learning. Clear expectations. Warm guidance.
-  </p>
-  <p>
-    Mornings begin steadily. Children know where their belongings go, what comes next, and what’s expected.
-    Learning is hands-on, guided, and meaningful — with space for movement, creativity, and connection.
-  </p>
-  <p>
-    The rhythm is predictable. The environment is consistent. Children are supported in building independence and confidence — one day at a time.
-  </p>
-</section>
-
-<!-- DESIGNED DIFFERENTLY -->
+<!-- DIFFERENCE -->
 <section id="difference" class="section reveal">
   <h2>Designed Differently</h2>
 
@@ -480,7 +468,6 @@ footer{
 <section id="founder" class="section reveal">
   <div class="founder-wrap">
     <div>
-      <!-- Put your headshot in the same folder as this HTML, named exactly: founder-photo.jpg -->
       <img src="founder-photo.jpg" class="founder-photo" alt="Margarita Alkhfajy, Founder of Keizer Rugrats Playschool">
     </div>
 
