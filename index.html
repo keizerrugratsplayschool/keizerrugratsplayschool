@@ -42,12 +42,17 @@ body{
 
 /* Prevent anchor jumps hiding behind sticky header */
 section{scroll-margin-top:140px}
-
-h1,h2{
+<a href="#contact">Contact</a>
+  h1,h2{
   font-family:"Playfair Display", serif;
   letter-spacing:-.4px;
 }
-
+  .section{
+  backdrop-filter: blur(2px);
+}
+h1{
+  letter-spacing:-.2px;
+}
 p{margin:12px 0}
 strong{font-weight:800}
 
@@ -61,8 +66,11 @@ strong{font-weight:800}
   background:var(--navy);
   box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
-
-.topbar{
+/* Shrink header after scroll */
+.header-wrap.is-mini .topbar{ display:none; }
+.header-wrap.is-mini .logo{ width:130px; margin-bottom:6px; }
+.header-wrap.is-mini header{ padding:8px 10px; }
+.header-wrap.is-mini section{ scroll-margin-top:110px; }.topbar{
   font-size:12px;
   color:rgba(255,255,255,.92);
   padding:6px 12px;
@@ -381,7 +389,11 @@ footer{
   <div class="callout">
     Built with intention from the beginning: a defined daily rhythm, clear expectations, and purposeful learning — not improvised care.
   </div>
-
+  
+<p class="micro" style="margin-top:14px;">
+Enrollment remains intentionally limited to preserve quality and consistency.
+</p>
+  
   <a href="#enrollment" class="button">Join the Interest List</a>
   <a href="#difference" class="button secondary" style="margin-left:10px;">See What’s Different</a>
 
@@ -481,7 +493,10 @@ footer{
       <p class="micro">Enrollment remains intentionally limited so quality is never diluted.</p>
     </div>
   </div>
-
+<p style="margin-top:20px;">
+There is no background television, no chaotic transitions, and no improvising the day.
+The environment is steady, purposeful, and built for growth.
+</p>
   <div class="callout" style="margin-top:18px;">
     Families choose Keizer Rugrats Playschool because they want their child’s early years handled with intention.
   </div>
@@ -568,8 +583,8 @@ footer{
     </p>
   </details>
 </section>
-
-<!-- INTEREST LIST (FORMSPREE) -->
+<a href="#contact">Contact</a>
+  <!-- INTEREST LIST (FORMSPREE) -->
 <section id="enrollment" class="section reveal">
   <h2>Interest List</h2>
 
@@ -641,12 +656,36 @@ footer{
   <p><strong>Email:</strong> info@KeizerRugrats.com</p>
   <p class="micro">Keizer, Oregon</p>
 </section>
-
+<section class="section reveal" style="text-align:center;">
+  <h2>Prepared with Care. Built with Intention.</h2>
+  <p class="lead">
+    Families who value structure, growth, and calm leadership tend to feel at home here.
+  </p>
+</section>
 <footer>
   © <span id="year"></span> Keizer Rugrats Playschool · Keizer, Oregon
 </footer>
 
 <script>
+  <script>
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Subtle reveal on scroll
+  const els = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('is-visible');
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => obs.observe(el));
+
+  // ✅ Make header shrink after scroll
+  const headerWrap = document.querySelector('.header-wrap');
+  window.addEventListener('scroll', () => {
+    headerWrap.classList.toggle('is-mini', window.scrollY > 50);
+  });
+</script>
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
