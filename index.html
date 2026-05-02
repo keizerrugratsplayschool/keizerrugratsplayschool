@@ -287,10 +287,24 @@ ul{
 li{margin:8px 0}
 
 .founder-wrap{
-  display:flex;
-  flex-wrap:wrap;
-  gap:34px;
-  align-items:center;
+  display:block;
+}
+.founder-photo{
+  float:left;
+  width:260px;
+  max-width:42%;
+  margin:6px 22px 10px 0;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+@media (max-width: 700px){
+  .founder-photo{
+    float:none;
+    display:block;
+    margin:0 auto 16px;
+    max-width:280px;
+    width:100%;
+  }
 }
 .founder-photo{
   width:100%;
